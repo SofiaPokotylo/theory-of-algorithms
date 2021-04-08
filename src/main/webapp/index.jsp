@@ -23,5 +23,10 @@
         
         <p><a href="lab1.jsp">Alternative variant</a></p>
         
+         <form action="lab2.jsp">
+            
+            <input type="submit" value="Lab2">
+        </form>
+        
     </body>
 </html>
