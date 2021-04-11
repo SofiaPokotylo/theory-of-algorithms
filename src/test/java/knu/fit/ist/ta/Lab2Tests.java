@@ -5,10 +5,10 @@
  */
 package knu.fit.ist.ta;
 
-import knu.fit.ist.ta.lab2.EquationSample;
+import static java.lang.Float.NaN;
+import knu.fit.ist.ta.lab2.MyEquation;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -18,16 +18,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class Lab2Tests {
     
-    @Autowired
-    EquationSample equationSample;
-
-        
         @Test
         void test1(){
-            assertEquals(5,equationSample.solve(2));
-            assertEquals(-5,equationSample.solve(-2));
-            assertEquals(2,equationSample.solve(5));
-            assertEquals(Integer.MAX_VALUE,equationSample.solve(0));
+            assertEquals(0.943,MyEquation.solve(1),0.01);
+            assertEquals(0,MyEquation.solve(0),0.01);
+            assertEquals(-0.36,MyEquation.solve(2),0.01);
+            assertEquals(-0.015,MyEquation.solve(11),0.01);
+            assertEquals(NaN,MyEquation.solve(-1));
+            assertEquals(Integer.MAX_VALUE,MyEquation.solve((float) 1.2874342));
             
         }
     

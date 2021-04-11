@@ -13,6 +13,9 @@
         <title>Lab 1</title>
     </head>
     <body>
+    <center>
+        <FONT face ="fantasy">
+        <FONT size = 5>
         <h1>This is my lab1!</h1>
         
         <%!MyFirstJavaClass mFJC = new MyFirstJavaClass(5);%>
@@ -28,5 +31,8 @@
         <p>8mod3 = <%=x%></p>
         
         <a href="index.jsp">Home</a>
+        </FONT>
+        </FONT>
+    </center>
     </body>
 </html>

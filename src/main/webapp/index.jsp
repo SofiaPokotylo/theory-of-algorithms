@@ -12,21 +12,44 @@
         <title>TA Start</title>
     </head>
     <body>
+        
+    <center>
+        <FONT face ="fantasy">
+        <FONT size = 5>
         <h1>My TA labs</h1>
         
-        <p>This is a paragraph</p>
+        <fieldset>
+        <legend>These are my labs</legend>
         
-        <form action="lab1.jsp">
+        <div>
             
-            <input type="submit" value="Lab1">
-        </form>
+            <form action="lab1.jsp">
+
+                <input type="submit" value="Lab1">
+            </form>
+            
+        </div>
         
-        <p><a href="lab1.jsp">Alternative variant</a></p>
+        <HR width = "50%">
         
-         <form action="lab2.jsp">
+        <div>
+        
+            <form action="lab2form.jsp">
             
             <input type="submit" value="Lab2">
-        </form>
         
+            </form>
+           
+        </div>
+        
+        <HR width = "50%">
+        
+        <p><a href="lab1.jsp">Alternative variant</a></p>
+        </fieldset>
+        </FONT>
+        </FONT>
+        
+    </center>
+    
     </body>
 </html>
