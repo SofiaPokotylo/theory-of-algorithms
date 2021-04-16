@@ -16,19 +16,27 @@
     <center>
         <FONT face ="fantasy">
         <FONT size = 5>
-        <h1>This is my lab1!</h1>
+        <h1>This is my lab1</h1>
+        
+        <h3>Task: "Perform basic operations and display the result 
+            on the page"</h3>
         
         <%!MyFirstJavaClass mFJC = new MyFirstJavaClass(5);%>
         
         <%
            int x = mFJC.getMyInt();
            
-           x += 3;
-           x %= 3;
-           
         %>
         
-        <p>8mod3 = <%=x%></p>
+        <p>x = <%=x%></p>
+        
+        <%x += 3;%>
+        
+        <p>x = x+3 = <%=x%></p>
+        
+        <%x %= 3;%>
+        
+        <p>The remainder of division x by 3 = <%=x%></p>
         
         <a href="index.jsp">Home</a>
         </FONT>

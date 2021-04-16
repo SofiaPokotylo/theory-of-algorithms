@@ -15,11 +15,16 @@
     <body>
         
         <center>
-        <FONT face ="fantasy">
-        <FONT size = 3>
-        <h1>Insert k - the number of elements of the array, 
-            n - the range of natural numbers and s - seed!</h1>
-        
+            
+            <FONT face ="fantasy">
+            <FONT size = 5>
+                <h1>Insert values!</h1>
+            </FONT>  
+            <FONT size = 3>
+                <h3>k - the number of elements of the array</h3>
+                <h3>n - the desired range of natural numbers</h3>
+                <h3>s - seed for the random function</h3>
+            </FONT>
         <div>
         
             <form action="./lab3" method="post">

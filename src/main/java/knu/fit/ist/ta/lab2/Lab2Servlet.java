@@ -91,8 +91,12 @@ public class Lab2Servlet extends HttpServlet {
         //Lab2Show lab2show = new Lab2Show();
         
         String result = lab2show.showResult(request.getParameter("x"));
+        String step1 = lab2show.showStep1(request.getParameter("x"));
+        String step2 = lab2show.showStep2(request.getParameter("x"));
         
         request.setAttribute("result", result);
+        request.setAttribute("step1", step1);
+        request.setAttribute("step2", step2);
         
         request.getRequestDispatcher("lab2.jsp").forward(request, response);
         

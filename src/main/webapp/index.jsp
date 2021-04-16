@@ -12,14 +12,14 @@
         <title>TA Start</title>
     </head>
     <body>
-        
+       
     <center>
         <FONT face ="fantasy">
         <FONT size = 5>
         <h1>My TA labs</h1>
         
         <fieldset>
-        <legend>These are my labs</legend>
+        <legend>Done by Pokotylo Sofia, IP-12</legend>
         
         <div>
             

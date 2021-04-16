@@ -15,10 +15,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyEquation {
     
+    private static float a = -5, b = 1, c = 7, d = 8;
+    
     public static float solve(float x){
        
-        
-        float a = -5, b = 1, c = 7, d = 8;
         
         float dE = (float) (Math.pow(b, 2) - 4*a*c);
      
@@ -32,6 +32,18 @@ public class MyEquation {
         }
         
         return  (float) (Math.sqrt(d*x)/(a*x*x+b*x+c));
+        
+    }
+    
+    public static float part1(float x){
+        
+        return (float) Math.sqrt(d*x);
+        
+    }
+    
+    public static float part2(float x){
+        
+        return (float) (a*x*x+b*x+c);
         
     }
     

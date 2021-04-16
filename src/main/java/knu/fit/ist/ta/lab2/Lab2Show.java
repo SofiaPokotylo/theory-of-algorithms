@@ -28,4 +28,24 @@ public class Lab2Show {
         else{return "The result is " + df.format(MyEquation.solve(x));}
     }
     
+    public String showStep1(String xString){
+        
+        if(xString.equals("")){return "...";}
+        Float x = Float.parseFloat(xString);
+        if(MyEquation.solve(x)!=Integer.MAX_VALUE && x>0){
+            return "\u221A(d*x) = " + df.format(MyEquation.part1(x));
+        }
+        else return "...";
+    }
+    
+    public String showStep2(String xString){
+        
+        if(xString.equals("")){return "...";}
+        Float x = Float.parseFloat(xString);
+        if(MyEquation.solve(x)!=Integer.MAX_VALUE && x>0){
+            return "a*xˆ2+b*x+c = "+ df.format(MyEquation.part2(x));
+        }
+        else return "...";
+    }
+    
 }

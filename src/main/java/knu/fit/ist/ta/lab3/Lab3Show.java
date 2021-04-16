@@ -17,7 +17,39 @@ public class Lab3Show {
     
     //DecimalFormat df = new DecimalFormat("###.##");
     
-    public String showResult(String kString, String nString, String sString){
+    public String showInitial(String kString, String nString, String sString){
+        
+        if(kString.equals("") || nString.equals("") || sString.equals("")){
+            return "...";}
+        int k = Integer.parseInt(kString);
+        int n = Integer.parseInt(nString);
+        int s = Integer.parseInt(sString);
+        
+        
+        if(k<=0 || n<=0 || k>n){return "...";}
+        else{
+            return "The initial array: {" + 
+                    Task10.arrayPrint(Task10.arrayNumbers(n))+"}";
+        }
+    }
+    
+    public String showShuffled(String kString, String nString, String sString){
+        
+        if(kString.equals("") || nString.equals("") || sString.equals("")){
+            return "...";}
+        int k = Integer.parseInt(kString);
+        int n = Integer.parseInt(nString);
+        int s = Integer.parseInt(sString);
+        
+        
+        if(k<=0 || n<=0 || k>n){return "...";}
+        else{
+            return "The shuffled initial array: {" + 
+            Task10.arrayPrint(Task10.arrayShuffle(Task10.arrayNumbers(n),s))+"}";
+        }
+    }
+    
+    public String showArray(String kString, String nString, String sString){
         
         if(kString.equals("") || nString.equals("") || sString.equals("")){
             return "Please enter all values";}
@@ -31,11 +63,30 @@ public class Lab3Show {
         if(k>n){return "The range of the numbers must be more than or equal "
                 + "to the number of elements of the array";}
         else{
-            return "The array: {" + Task10.arrayPrint(Task10.arrayNatural(
-            k,n,Task10.arrayShuffle(Task10.arrayNumbers(n),s))) +
-            "}, the largest values of the array: " + Task10.arrayPrint(
+            return "The required array: {" + Task10.arrayPrint(Task10.arrayNatural(
+            k,n,Task10.arrayShuffle(Task10.arrayNumbers(n),s))) + "}";}
+    }
+    
+    public String showTheLargest(String kString, String nString, String sString){
+        
+        if(kString.equals("") || nString.equals("") || sString.equals("")){
+            return "...";}
+        int k = Integer.parseInt(kString);
+        int n = Integer.parseInt(nString);
+        int s = Integer.parseInt(sString);
+        
+        
+        if(k<=0 || n<=0 || k>n){return "...";}
+        else if(k<3){
+            return "The number of values of the array is less than 3: " + Task10.arrayPrint(
             Task10.find3Biggest(Task10.arrayNatural(k,n,Task10.arrayShuffle(
-            Task10.arrayNumbers(n),s)),k));}
+            Task10.arrayNumbers(n),s)),k));
+        }
+        else{
+            return "The three largest values of the array: " + Task10.arrayPrint(
+            Task10.find3Biggest(Task10.arrayNatural(k,n,Task10.arrayShuffle(
+            Task10.arrayNumbers(n),s)),k));
+        }
     }
     
 }

@@ -88,10 +88,22 @@ public class Lab3Servlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String result = lab3show.showResult(request.getParameter("k"), 
+        String initial = lab3show.showInitial(request.getParameter("k"), 
                 request.getParameter("n"), request.getParameter("s"));
         
-        request.setAttribute("result", result);
+        String shuffled = lab3show.showShuffled(request.getParameter("k"), 
+                request.getParameter("n"), request.getParameter("s"));
+        
+        String array = lab3show.showArray(request.getParameter("k"), 
+                request.getParameter("n"), request.getParameter("s"));
+        
+        String theLargest = lab3show.showTheLargest(request.getParameter("k"), 
+                request.getParameter("n"), request.getParameter("s"));
+        
+        request.setAttribute("initial", initial);
+        request.setAttribute("shuffled", shuffled);
+        request.setAttribute("array", array);
+        request.setAttribute("theLargest", theLargest);
         
         request.getRequestDispatcher("lab3.jsp").forward(request, response);
         
