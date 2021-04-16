@@ -32,7 +32,7 @@ public class Lab2Show {
         
         if(xString.equals("")){return "...";}
         Float x = Float.parseFloat(xString);
-        if(MyEquation.solve(x)!=Integer.MAX_VALUE && x>0){
+        if(MyEquation.solve(x)!=Integer.MAX_VALUE && x>=0){
             return "\u221A(d*x) = " + df.format(MyEquation.part1(x));
         }
         else return "...";
@@ -42,7 +42,7 @@ public class Lab2Show {
         
         if(xString.equals("")){return "...";}
         Float x = Float.parseFloat(xString);
-        if(MyEquation.solve(x)!=Integer.MAX_VALUE && x>0){
+        if(MyEquation.solve(x)!=Integer.MAX_VALUE && x>=0){
             return "a*xˆ2+b*x+c = "+ df.format(MyEquation.part2(x));
         }
         else return "...";
