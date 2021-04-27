@@ -8,11 +8,7 @@ package knu.fit.ist.ta;
 
 import knu.fit.ist.ta.lab4.Text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static java.lang.Float.NaN;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
