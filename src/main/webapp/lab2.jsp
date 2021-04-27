@@ -17,7 +17,7 @@
         <center>
             
             <FONT size = 5>
-            <FONT face ="fantasy">
+            <FONT face ="cursive">
                 <h1>My lab2</h1>
                 
                 <h2>Task: "Solve the equation (&#8730(d&#215x))/(a&#215x&#178+

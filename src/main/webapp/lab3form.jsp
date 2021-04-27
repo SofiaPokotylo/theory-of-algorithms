@@ -16,7 +16,7 @@
         
         <center>
             
-            <FONT face ="fantasy">
+            <FONT face ="cursive">
             <FONT size = 5>
                 <h1>Insert values!</h1>
             </FONT>  

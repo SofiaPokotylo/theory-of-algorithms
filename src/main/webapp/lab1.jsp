@@ -14,12 +14,11 @@
     </head>
     <body>
     <center>
-        <FONT face ="fantasy">
+        <FONT face ="cursive">
         <FONT size = 5>
         <h1>This is my lab1</h1>
         
-        <h3>Task: "Perform basic operations and display the result 
-            on the page"</h3>
+        <h3>Task: "Perform basic operations and display the result on the page"</h3>
         
         <%!MyFirstJavaClass mFJC = new MyFirstJavaClass(5);%>
         

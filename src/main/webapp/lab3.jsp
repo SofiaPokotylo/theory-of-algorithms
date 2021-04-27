@@ -13,12 +13,11 @@
     </head>
     <body>
         <center>
-            <FONT face ="fantasy">
+            <FONT face ="cursive">
             <FONT size = 5>
                 <h1>My lab3</h1>
 
-                <h2>Task10: "Fill in an array of different k natural numbers. 
-                    Find the three largest numbers."</h2>
+                <h2>Task10: "Fill in an array of different k natural numbers. Find the three largest numbers."</h2>
                 
                 <h5><%=request.getAttribute("initial")%></h5>
                 <h5><%=request.getAttribute("shuffled")%></h5>
