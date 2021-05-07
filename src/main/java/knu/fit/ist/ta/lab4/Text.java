@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Text {
-    public String text;
+    public static String text;
     static Matcher matcher;
     static Pattern pattern;
     
@@ -59,7 +59,7 @@ public class Text {
     public static String cleanText(String ctext){
         
         ctext = ctext.toLowerCase();
-        ctext = ctext.replaceAll("\\bthe|and\\b", "").trim().strip();
+        ctext = ctext.replaceAll("\\bthe|and\\b", "").trim();
         ctext = ctext.replaceAll("\\b\\w{1,2}\\b", "").trim();
         ctext = ctext.replaceAll("[^\\w -]", "").trim();
         ctext = ctext.replaceAll("-{2,}","");
