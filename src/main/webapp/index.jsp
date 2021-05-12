@@ -68,6 +68,19 @@
         
         <HR width = "50%">
         
+        <div>
+        
+            <form action="lab5form.jsp">
+            
+            <input type="submit" value="Lab5">
+        
+            </form>
+           
+        </div>
+        
+        <HR width = "50%">
+        
+        
         <p><a href="lab1.jsp">Alternative variant</a></p>
         </fieldset>
         </FONT>
