@@ -17,17 +17,9 @@ public class ObjectFields {
     
     Random rnd = new Random();
     
-    public String str;
+    private String str = "";
 
     public ObjectFields() {
-    }
-
-    public ObjectFields(String str) {
-        this.str = str;
-    }
-
-    public ObjectFields(short shr) {
-        this.shr = shr;
     }
 
     public void setStr(String str) {
@@ -38,7 +30,7 @@ public class ObjectFields {
         return str;
     }
     
-    public short shr;
+    private short shr = 0;
 
     public void setShr(short shr) {
         this.shr = shr;
@@ -48,7 +40,7 @@ public class ObjectFields {
         return shr;
     }
 
-    public int index;
+    private int index;
 
     public void setIndex(int index) {
         this.index = index;

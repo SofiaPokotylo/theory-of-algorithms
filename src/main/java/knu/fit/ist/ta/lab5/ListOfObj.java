@@ -17,20 +17,21 @@ import org.springframework.stereotype.Component;
 @Component
 public class ListOfObj {
     
-    public static ArrayList<ObjectFields> listOfObj(){
+    private static int seed=0;
+
+    public static void setSeed(int seed) {
+        ListOfObj.seed = seed;
+    }
+    
+    public static ArrayList<ObjectFields> listOfObj(int n){
         
-        
-        Random rnd = new Random();
+        Random rnd = new Random(seed);
 
         ArrayList<ObjectFields> listObj = new ArrayList<>();
 
-        ArrayList<String> strListObj = new ArrayList<>();
-
-        //ObjectFields obj = new ObjectFields();
+        //ArrayList<String> strListObj = new ArrayList<>();
         
         int p = 25;
-        
-        int n = 24237;
         
         char[] symb = new char[p];
         
@@ -66,11 +67,9 @@ public class ListOfObj {
             
             listObj.add(obj);
             
-            strListObj.add(obj.getStr()+" - "+obj.getShr());
+            //strListObj.add(obj.getStr()+" - "+obj.getShr());
 
         }
-        
-        
         return listObj;
     }
     
