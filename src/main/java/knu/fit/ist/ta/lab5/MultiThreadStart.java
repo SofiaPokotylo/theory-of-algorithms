@@ -38,6 +38,12 @@ public class MultiThreadStart {
             new Thread(mtsList.get(i)).start();
         }
         
+        mtsList.forEach(mts -> {
+            if(!mts.isFinished()){
+                while(!mts.isFinished()){};
+            };
+        });
+        
         for(int i=0;i<n;++i){
             System.out.println(mtsList.get(i).getSearchResults());
         }
@@ -81,16 +87,26 @@ public class MultiThreadStart {
             new Thread(mtsList.get(i)).start();
         }
         
+        int a=0;
+        
+        mtsList.forEach(mts -> {
+            if(!mts.isFinished()){
+                while(!mts.isFinished()){};
+            };
+        });
+        
         for(int i=0;i<n;++i){
-            if(mtsList.get(i).getSearchResults().isEmpty()) return "The size of list - "+list.size()+
-                    ", some threads didn`t complete the search, try again e.g. insert more threads";
-            if(!mtsList.get(i).getSearchResults().contains(-1)) s=-1;
-            result.add("Thread"+(i+1)+" - "+mtsList.get(i).getSearchResults());
+            if(!mtsList.get(i).getSearchResults().contains(-1)){ 
+                int ind = mtsList.get(i).getSearchResults().get(0);
+                if(i!=0) ind += k*i+1;
+                result.add("Thread"+(i+1)+" - "+mtsList.get(i).getSearchResults()+" - "+ind);
+            }
         }
         
         time = System.currentTimeMillis() - time;
-        if(s!=-1) return "The size of list - "+list.size()+", the list doesn`t contain "+p;
-        return "The size of list - "+list.size()+", threads: "+result.toString()+
+        if(result.isEmpty()) return "The size of list - "+list.size()+", the list doesn`t contain "+p;
+        return "The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+                + " the index of the element in the list: "+result.toString()+
                 ", time (ms): "+time; 
         
     }
@@ -119,15 +135,31 @@ public class MultiThreadStart {
             new Thread(mtsList.get(i)).start();
         }
         
+        mtsList.forEach(mts -> {
+            if(!mts.isFinished()){
+                while(!mts.isFinished()){};
+            };
+        });
+        
+        /*for(int i=0;i<n;++i){
+        if(!mtsList.get(i).getSearchResults().contains(-1)) s=-1;
+        result.add("Thread"+(i+1)+" - "+mtsList.get(i).getSearchResults());
+        }*/
+        
         for(int i=0;i<n;++i){
-            if(mtsList.get(i).getSearchResults().isEmpty()) return "The size of list - "+list.size()+
-                    ", some threads didn`t complete the search, try again e.g. insert more threads";
-            if(!mtsList.get(i).getSearchResults().contains(-1)) s=-1;
-            result.add("Thread"+(i+1)+" - "+mtsList.get(i).getSearchResults());
+            if(!mtsList.get(i).getSearchResults().contains(-1)){ 
+                int ind = mtsList.get(i).getSearchResults().get(0);
+                if(i!=0) ind += k*i+1;
+                result.add("Thread"+(i+1)+" - "+mtsList.get(i).getSearchResults()+" - "+ind);
+            }
         }
         
-        if(s!=-1) return "The size of list - "+list.size()+", the list doesn`t contain "+p;
-        return "The size of list - "+list.size()+", threads: "+result.toString(); 
+        /*if(s!=-1) return "The size of list - "+list.size()+", the list doesn`t contain "+p;
+        return "The size of list - "+list.size()+", threads: "+result.toString(); */
+        
+        if(result.isEmpty()) return "The size of list - "+list.size()+", the list doesn`t contain "+p;
+        return "The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+                + " the index of the element in the list: "+result.toString();
         
     }
     

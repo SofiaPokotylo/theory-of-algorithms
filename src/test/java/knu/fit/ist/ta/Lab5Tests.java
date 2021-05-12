@@ -38,8 +38,6 @@ public class Lab5Tests {
         void test1(){
             
             String text = "text sun sea replace create center learn sun program event all";
-           
-            //List<Integer> result = new ArrayList<>();
             
             assertEquals(Arrays.asList(4),SearchWord.linearSearch("create", text));
             assertEquals(Arrays.asList(),SearchWord.linearSearch("none", text));
@@ -247,10 +245,10 @@ public class Lab5Tests {
             
             SortObj.setList(list);
             
-            assertEquals(Arrays.asList("think - 0","lake - 0","aqua - 0","way - 3","time - 4"),SortObj.listObj());
+            assertEquals(Arrays.asList("think - "+Short.MAX_VALUE,"lake - "+Short.MAX_VALUE,"aqua - "+Short.MAX_VALUE,"way - 3","time - 4"),SortObj.listObj());
             assertEquals(Arrays.asList("aqua","lake","think","time","way"),SortObj.sortApproach1());
-            assertEquals("[0, 0, 0, 3, 4]",SortObj.sortApproach2().toString());
-            assertEquals(Arrays.asList("aqua - 0 - 0","lake - 0 - 1","think - 0 - 2","time - 4 - 7","way - 3 - 7"),
+            assertEquals("[3, 4, "+Short.MAX_VALUE+", "+Short.MAX_VALUE+", "+Short.MAX_VALUE+"]",SortObj.sortApproach2().toString());
+            assertEquals(Arrays.asList("aqua - "+Short.MAX_VALUE+" - 2","lake - "+Short.MAX_VALUE+" - 3","think - "+Short.MAX_VALUE+" - 4","time - 4 - 4","way - 3 - 4"),
                     SortObj.sortApproach1All(SortObj.sortApproach1(), SortObj.sortApproach2()));
             
             list.removeAll(list);
@@ -263,10 +261,13 @@ public class Lab5Tests {
             
             SortObj.setList(list);
             
-            assertEquals(Arrays.asList("think - 0","lake - 0","aqua - 0","way - 0","time - 0"),SortObj.listObj());
+            assertEquals(Arrays.asList("think - "+Short.MAX_VALUE,"lake - "+Short.MAX_VALUE,"aqua - "+
+                    Short.MAX_VALUE,"way - "+Short.MAX_VALUE,"time - "+Short.MAX_VALUE),SortObj.listObj());
             assertEquals(Arrays.asList("aqua","lake","think","time","way"),SortObj.sortApproach1());
-            assertEquals("[0, 0, 0, 0, 0]",SortObj.sortApproach2().toString());
-            assertEquals(Arrays.asList("aqua - 0 - 0","lake - 0 - 1","think - 0 - 2","time - 0 - 3","way - 0 - 4"),
+            assertEquals("["+Short.MAX_VALUE+", "+Short.MAX_VALUE+", "+Short.MAX_VALUE+", "+Short.MAX_VALUE+", "+Short.MAX_VALUE+"]",
+                    SortObj.sortApproach2().toString());
+            assertEquals(Arrays.asList("aqua - "+Short.MAX_VALUE+" - 0","lake - "+Short.MAX_VALUE+" - 1",
+                    "think - "+Short.MAX_VALUE+" - 2","time - "+Short.MAX_VALUE+" - 3","way - "+Short.MAX_VALUE+" - 4"),
                     SortObj.sortApproach1All(SortObj.sortApproach1(), SortObj.sortApproach2()));
             
             str.removeAll(str);
@@ -313,10 +314,13 @@ public class Lab5Tests {
             
             SortObj.setList(list);
             
-            assertEquals(Arrays.asList(" - 0"," - 0"," - 0"," - 0"," - 0"),SortObj.listObj());
+            assertEquals(Arrays.asList(" - "+Short.MAX_VALUE," - "+Short.MAX_VALUE," - "+
+                    Short.MAX_VALUE," - "+Short.MAX_VALUE," - "+Short.MAX_VALUE),SortObj.listObj());
             assertEquals(Arrays.asList("","","","",""),SortObj.sortApproach1());
-            assertEquals("[0, 0, 0, 0, 0]",SortObj.sortApproach2().toString());
-            assertEquals(Arrays.asList(" - 0 - 0"," - 0 - 0"," - 0 - 0"," - 0 - 0"," - 0 - 0"),
+            assertEquals("["+Short.MAX_VALUE+", "+Short.MAX_VALUE+", "+Short.MAX_VALUE+", "+Short.MAX_VALUE+
+                    ", "+Short.MAX_VALUE+"]",SortObj.sortApproach2().toString());
+            assertEquals(Arrays.asList(" - "+Short.MAX_VALUE+" - 0"," - "+Short.MAX_VALUE+" - 0"," - "+
+                    Short.MAX_VALUE+" - 0"," - "+Short.MAX_VALUE+" - 0"," - "+Short.MAX_VALUE+" - 0"),
                     SortObj.sortApproach1All(SortObj.sortApproach1(), SortObj.sortApproach2()));
             
         }
@@ -331,18 +335,25 @@ public class Lab5Tests {
                 list.add(i);
             }
             
-            /*assertEquals("The size of list - "+list.size()+", threads: "+
-            Arrays.asList("Thread1 - [0]","Thread2 - [-1]","Thread3 - [-1]",
-            "Thread4 - [-1]","Thread5 - [-1]","Thread6 - [-1]","Thread7 - [-1]",
-            "Thread8 - [-1]","Thread9 - [-1]"),MultiThreadStart.showTest(9, 0, list));*/
-            /*assertEquals("The size of list - "+list.size()+", some threads didn`t"
-            + " complete the search, try again e.g. insert more threads",MultiThreadStart.showTest(2, 0, list));*/
+            assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+                + " the index of the element in the list: "+Arrays.asList("Thread1 - [0] - 0"),MultiThreadStart.showTest(10, 0, list));
+            assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+                + " the index of the element in the list: "+Arrays.asList("Thread3 - [1] - 8"),MultiThreadStart.showTest(3, 7, list));
             assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(-5, 0, list));
+            assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(0, 4, list));
             assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(5, -4, list));
             assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(-5, -2, list));
             assertEquals("The number of the threads is too large, enter new value",MultiThreadStart.showTest(17, 0, list));
-            //assertEquals("The size of list - "+list.size()+", the list doesn`t contain 10",MultiThreadStart.showTest(9, 10, list));
+            assertEquals("The size of list - "+list.size()+", the list doesn`t contain 10",MultiThreadStart.showTest(9, 10, list));
             
+            list.set(5, 1);
             
+            assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+                + " the index of the element in the list: "+Arrays.asList("Thread1 - [1] - 1","Thread2 - [2] - 6"),
+                    MultiThreadStart.showTest(3, 1, list));
+            
+            list.removeAll(list);
+            
+            assertEquals("The list is empty",MultiThreadStart.showTest(2, 0, list));
         }
 }

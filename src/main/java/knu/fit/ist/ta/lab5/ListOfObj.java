@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ListOfObj {
     
-    private static int seed=0;
+    private static int seed=Integer.MAX_VALUE;
 
     public static void setSeed(int seed) {
         ListOfObj.seed = seed;
@@ -41,9 +41,9 @@ public class ListOfObj {
             ++j;
         }
        
-        String str = "";
+        String str;
        
-        short shr = (short) rnd.nextInt(Short.MAX_VALUE + 1);
+        short shr;
         
         for(int i=0;i<n;++i){
             
@@ -51,9 +51,9 @@ public class ListOfObj {
             
             str = "";
             
-            shr = (short) rnd.nextInt(Short.MAX_VALUE + 1);
+            shr = (short) rnd.nextInt(Short.MAX_VALUE);
                     
-            for(int q=0,k=rnd.nextInt(p),l=0;q<k || q==0;++q){
+            for(int q=0,k=rnd.nextInt(p),l;q<k || q==0;++q){
                 
                 l=rnd.nextInt(p);
                 

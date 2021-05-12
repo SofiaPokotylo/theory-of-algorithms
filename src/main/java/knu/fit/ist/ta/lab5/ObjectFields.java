@@ -30,7 +30,7 @@ public class ObjectFields {
         return str;
     }
     
-    private short shr = 0;
+    private short shr = Short.MAX_VALUE;
 
     public void setShr(short shr) {
         this.shr = shr;
