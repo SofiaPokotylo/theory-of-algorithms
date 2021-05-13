@@ -26,15 +26,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 public class Lab5Tests {
     @Test
-                /*void test1(){
                 
-                String a = "This ? is a text$ FoR testing, {the} first   method!";
-                String b = "these are words for the second and third methods";
-                
-                assertEquals(Arrays.asList("and","are","for","methods","second","the",
-                "these","third","words"),SearchWord.sortApproach3(b));
-                
-                }*/
         void test1(){
             
             String text = "text sun sea replace create center learn sun program event all";

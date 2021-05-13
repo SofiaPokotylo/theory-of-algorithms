@@ -93,9 +93,6 @@ public class Lab5Servlet extends HttpServlet {
         String sortStr = lab5show.sortStr();
         String sortShr = lab5show.sortShr();
         String searchWord = lab5show.searchWord(request.getParameter("word"), request.getParameter("start"), request.getParameter("finish"));
-        String wordNumLet = lab5show.searchWordNumLet(request.getParameter("numLet"));
-        String wordFirstLet = lab5show.searchWordFirstLet(request.getParameter("let"), request.getParameter("index"));
-        String searchSeq = lab5show.searchSeq(request.getParameter("seq"));
         String mts = lab5show.mts(request.getParameter("threads"),request.getParameter("intp"));
         
         request.setAttribute("list", list);
@@ -103,9 +100,6 @@ public class Lab5Servlet extends HttpServlet {
         request.setAttribute("sortStr", sortStr);
         request.setAttribute("sortShr", sortShr);
         request.setAttribute("searchWord", searchWord);
-        request.setAttribute("wordNumLet", wordNumLet);
-        request.setAttribute("wordFirstLet", wordFirstLet);
-        request.setAttribute("searchSeq", searchSeq);
         request.setAttribute("mts", mts);
         
         //request.setAttribute("start", start);

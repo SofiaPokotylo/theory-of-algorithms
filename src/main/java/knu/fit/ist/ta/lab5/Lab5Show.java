@@ -129,41 +129,4 @@ public class Lab5Show {
         
     }
     
-    public String searchWordNumLet(String num){
-        if(num.equals("")){
-            return "Please, enter the number of letters";
-        }
-        else return SearchWord.linSNumLet(num,Text.getSet(Text.cleanText(Text.text)));
-    }
-    
-    public String searchWordFirstLet(String letter, String ind){
-        
-        if(letter.equals("") && ind.equals("")) return "Please, enter a letter or index";
-        
-        if(!letter.equals("") && !(letter.substring(1).equals("") || letter.substring(1).matches(" {1,}"))){
-            return "Please, enter one letter";
-        }   
-        if(ind.equals("")){
-            return SearchWord.linSFirstLet(letter.charAt(0),Text.cleanText(Text.text));
-        }
-        
-        if(letter.equals("") && Integer.parseInt(ind)>=0) return SearchWord.linSFirstLet(Integer.parseInt(ind),SearchWord.sortApproach3(Text.cleanText(Text.text)));
-        
-        else{
-            int i = Integer.parseInt(ind);
-
-            if(i<0) return "The index must be positive";
-            
-            return "Letter: "+SearchWord.linSFirstLet(letter.charAt(0),Text.cleanText(Text.text))
-                        +", index: "+SearchWord.linSFirstLet(i,SearchWord.sortApproach3(Text.cleanText(Text.text)));
-        }
-    }
-    
-    public String searchSeq(String seq){
-        if(seq.equals("")){
-            return "Please, enter the sequence";
-        }   
-        else return SearchWord.linSSeq(seq,Text.getSet(Text.cleanText(Text.text) ));
-    }
-    
 }

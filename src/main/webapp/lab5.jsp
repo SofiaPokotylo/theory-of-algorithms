@@ -36,24 +36,6 @@
                 <h3><%=request.getAttribute("searchWord")%></h3>
                 </ins>
                 
-                <h3>The words that consist of <%=request.getParameter("numLet")%> letters</h3>
-                
-                <ins>
-                <h3><%=request.getAttribute("wordNumLet")%></h3>
-                </ins>
-                
-                <h3>The words that start of the defined letter</h3>
-                
-                <ins>
-                <h3><%=request.getAttribute("wordFirstLet")%></h3>
-                </ins>
-                
-                <h3>The words that contain the sequence <%=request.getParameter("seq")%></h3>
-                
-                <ins>
-                <h3><%=request.getAttribute("searchSeq")%></h3>
-                </ins>
-                
                 <h2>Part2 - sort the list of objects</h2>
                 
                 <h3>Unsorted list of objects</h3>

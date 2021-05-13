@@ -4,7 +4,7 @@
     Author     : macbook
 --%>
 
-<%@page import="knu.fit.ist.ta.lab5.SearchWord"%>
+
 <%@page import="knu.fit.ist.ta.lab4.Text"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
     <body>
         <center>
             <%!Text text = new Text();%>
-            <%!SearchWord sortSearch = new SearchWord();%>
+            
             <FONT face ="cursive">
                 <FONT size = 5>
                     <h1>Insert the values</h1>
@@ -53,25 +53,8 @@
                 
                         <input type="text" name="finish" placeholder="Enter the finish index"/>
                 
-                        <h2>If you want to look for the words that contain some sequence of letters, enter the sequence</h2>
-                
-                        <input type="text" name="seq" placeholder="Enter the sequence"/>
-                
-                        <h2>Enter the length of the search words</h2>
-                
-                        <input type="text" name="numLet" placeholder="Enter the number of letters"/>
-                
-                        <h2>Enter the first letter of the search words or the index</h2>
-                
                     </FONT>
-                
-                    <h2>The indices</h2>
-                    <h2><%=sortSearch.startNum(sortSearch.sortApproach3(text.cleanText(text.text)))%></h2>
-                
-                    <input type="text" name="let" placeholder="Enter the first letter"/>
-                
-                    <input type="text" name="index" placeholder="Enter the index"/>
-                
+              
                     <h1>Part2 "Sort objects"</h1>
                 
                     <FONT face ="times new roman">
@@ -103,10 +86,6 @@
                     </form>
            
                 </div>
-        
-                <h2>The sorted text</h2>
-        
-                <%=sortSearch.sortApproach3(text.cleanText(text.text))%>
       
             </FONT>
         </center>
