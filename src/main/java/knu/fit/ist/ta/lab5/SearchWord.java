@@ -20,7 +20,7 @@ public class SearchWord {
 
     public static List<Integer> linearSearch(String find, String text) {
         List<Integer> result = new ArrayList<>();
-        if(text.isBlank() || find.isBlank()) return result;
+        if(text.isEmpty() || find.isEmpty()) return result;
         List<String> list = Arrays.asList(text.split(" "));
         if(list.isEmpty()) return result;
         int n = list.size();
@@ -39,7 +39,7 @@ public class SearchWord {
     
      public static List<Integer> linearSearch(String find, int start, String text) {
         List<Integer> result = new ArrayList<>();
-        if(text.isBlank() || find.isBlank()) return result;
+        if(text.isEmpty() || find.isEmpty()) return result;
         if(start<0) start = 0;
         List<String> list = Arrays.asList(text.split(" "));
         if(list.isEmpty()) return result;
@@ -60,7 +60,7 @@ public class SearchWord {
     
     public static List<Integer> linearSearch(String find, int start, int finish, String text) {
         List<Integer> result = new ArrayList<>();
-        if(text.isBlank() || find.isBlank()) return result;
+        if(text.isEmpty() || find.isEmpty()) return result;
         if(start<0) start=0;
         List<String> list = Arrays.asList(text.split(" "));
         if(list.isEmpty()) return result;
@@ -81,7 +81,7 @@ public class SearchWord {
     
     public static List<Integer> linearSearch(String find, String text, int finish) {
         List<Integer> result = new ArrayList<>();
-        if(text.isBlank() || find.isBlank()) return result;
+        if(text.isEmpty() || find.isEmpty()) return result;
         List<String> list = Arrays.asList(text.split(" "));
         if(list.isEmpty()) return result;
         int n = list.size();
