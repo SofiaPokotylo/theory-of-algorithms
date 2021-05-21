@@ -13,7 +13,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import knu.fit.ist.ta.lab67.Lab67Show;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
@@ -88,7 +87,36 @@ public class Lab67Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        String treetIO = lab67show.treetIO(request.getParameter("nodes"));
+        String treetPO = lab67show.treetPO();
+        String treetPostO = lab67show.treetPostO();
+        String treetLO = lab67show.treetLO();
+        String addS = lab67show.addS(request.getParameter("add"));
+        String treeCS = lab67show.treeCS(request.getParameter("cont"));
+        String smallest = lab67show.smallest();
+        String largest = lab67show.largest();
+        String delete = lab67show.deleteS(request.getParameter("del"));
+        String treetPostONotRS = lab67show.treetPostONotRS();
+        String numLet = lab67show.numLet(request.getParameter("ch"),request.getParameter("str"),request.getParameter("ind"));
+        String tree = lab67show.tree();
+      
+        
+        request.setAttribute("tree", tree);
+        request.setAttribute("numLet", numLet);
+        request.setAttribute("treetIO", treetIO);
+        request.setAttribute("treetPO", treetPO);
+        request.setAttribute("treetPostO", treetPostO);
+        request.setAttribute("treetLO", treetLO);
+        request.setAttribute("addS", addS);
+        request.setAttribute("treeCS", treeCS);
+        request.setAttribute("smallest", smallest);
+        request.setAttribute("largest", largest);
+        request.setAttribute("delete", delete);
+        request.setAttribute("treetPostONotRS", treetPostONotRS);
+        
+        request.getRequestDispatcher("lab6-7.jsp").forward(request, response);
+        
     }
 
     /**

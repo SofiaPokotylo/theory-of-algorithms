@@ -4,6 +4,10 @@
     Author     : macbook
 --%>
 
+<%@page import="knu.fit.ist.ta.lab67.Lab67Show"%>
+<%@page import="knu.fit.ist.ta.lab67.SymmetricTree"%>
+<%@page import="knu.fit.ist.ta.lab67.BinaryTree"%>
+<%@page import="knu.fit.ist.ta.lab67.SortClearList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -19,60 +23,97 @@
 
                 <fieldset>
                     <legend>Tasks(V - 15)</legend>
-                    <h5>1.Improve the algorithm linearSearch and use it to analyze the text from the lab4</h5>
+                    <h5>1.Create a recursive method that counts the number of letters 'd' in a character string</h5>
                     <HR width = "50%">
-                    <h5>2.Generate a list of 24237 objects with fields of type String and short</h5>
+                    <h5>2.Create a symmetric binary search tree from the elements {5, 8, 7, 2, 6, 10, 4, 9}</h5>
                     <HR width = "50%">
-                    <h5>3.Create algorithms sortApproach1 and sortApproach2 and implement them for the list from task2</h5>
-                    <HR width = "50%">
-                    <h5>4.Create and implement an algorithm for multithreaded linear search for List(Integer)</h5>
+                    <h5>3.Create an iterative version of the algorithm Tree.traversePostOrder</h5>
                 </fieldset>
                 
-                <h2>Part1 - search the word</h2>
+                <h2>Part1 - recursion</h2>
                 
-                <h3>The search word</h3>
-                
-                <ins>
-                <h3><%=request.getAttribute("searchWord")%></h3>
-                </ins>
-                
-                <h2>Part2 - sort the list of objects</h2>
-                
-                <h3>Unsorted list of objects</h3>
+                <h3>The number of letters</h3>
                 
                 <ins>
-                <h3><%=request.getAttribute("list")%></h3>
+                <h3><%=request.getAttribute("numLet")%></h3>
                 </ins>
                 
-                <h3>The sorted String fields</h3>
+                <h2>Part2 - a symmetric binary search tree</h2>
+                
+                <h3>Tree</h3>
                 
                 <ins>
-                <h3><%=request.getAttribute("sortStr")%></h3>
+                <h3><%=request.getAttribute("tree")%></h3>
                 </ins>
                 
-                <h3>The sorted Short fields</h3>
+                <h3>Traverse In Order</h3>
                 
                 <ins>
-                <h3><%=request.getAttribute("sortShr")%></h3>
+                <h3><%=request.getAttribute("treetIO")%></h3>
                 </ins>
                 
-                <h3>The sorted list of objects</h3>
+                <h3>Traverse Pre Order</h3>
                 
                 <ins>
-                <h3><%=request.getAttribute("sortedList")%></h3>
+                <h3><%=request.getAttribute("treetPO")%></h3>
                 </ins>
                 
-                <h2>Part3 - multithreaded search</h2>
+                <h3>Traverse Post Order</h3>
                 
                 <ins>
-                <h3><%=request.getAttribute("mts")%></h3>
+                <h3><%=request.getAttribute("treetPostO")%></h3>
                 </ins>
+                
+                <h3>Traverse Level Order</h3>
+                
+                <ins>
+                <h3><%=request.getAttribute("treetLO")%></h3>
+                </ins>
+                
+                <h3>Add the value to the tree</h3>
+                
+                <ins>
+                <h3><%=request.getAttribute("addS")%></h3>
+                </ins>
+                
+                <h3>Remove the value from the tree</h3>
+                
+                <ins>
+                <h3><%=request.getAttribute("delete")%></h3>
+                </ins>
+                
+                <h3>The presence of a certain value</h3>
+                
+                <ins>
+                <h3><%=request.getAttribute("treeCS")%></h3>
+                </ins>
+                
+                <h3>The smallest value in the tree</h3>
+                
+                <ins>
+                <h3><%=request.getAttribute("smallest")%></h3>
+                </ins>
+                
+                <h3>The largest value in the tree</h3>
+                
+                <ins>
+                <h3><%=request.getAttribute("largest")%></h3>
+                </ins>
+                
+                <h2>Part3 - an iterative version of Tree.traversePostOrder</h2>
+                
+                <ins>
+                <h3><%=request.getAttribute("treetPostONotRS")%></h3>
+                </ins>
+                
+                <%SortClearList.clearList();%>
+                <%Lab67Show.setBt();%>
                 
                 <HR width = "50%">
                 
                 <div>
 
-                    <form action="lab5form.jsp">
+                    <form action="lab6-7form.jsp">
 
                     <input type="submit" value="New values">
 

@@ -100,8 +100,7 @@ public class SortObj {
 
             k++;
 
-        }
-        k=0; 
+        } 
 
         return strListObj;
     }

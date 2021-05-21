@@ -20,15 +20,15 @@
             
                 <div>
    
-                    <form action="./lab5" method="post">
+                    <form action="./lab6-7" method="post">
                 
-                    <h1>Part1 "Word"</h1>
-                
+                    <h1>Part1 "Recursion"</h1>
+                    
                     <FONT face ="times new roman">
                 
-                        <h2>Enter the search word</h2>
+                        <h2>Please, enter a character string</h2>
                 
-                        <input type="text" name="word" placeholder="Enter the word"/>
+                        <input type="text" name="str" placeholder="Enter a character string"/>
                 
                     </FONT>
                 
@@ -36,42 +36,48 @@
                 
                     <FONT face ="times new roman">
                 
-                        <h3>If you want to look for a word in a certain part of the text, enter the start index,
-                        the finish index, or the start and the finish indices</h3>
+                        <h3>If you want to count the number of letters in a certain part of the string, enter the index</h3>
                 
-                        <input type="text" name="start" placeholder="Enter the start index"/>
+                        <input type="text" name="ind" placeholder="Enter the index"/>
+                        
+                        <h3>If you want to count the number of characters (not 'd'), enter the character</h3>
                 
-                        <input type="text" name="finish" placeholder="Enter the finish index"/>
+                        <input type="text" name="ch" placeholder="Enter the character"/>
                 
                     </FONT>
-              
-                    <h1>Part2 "Sort objects"</h1>
-                
+                    
+                     <h1>Part2-3 "Tree"</h1>
+                    
                     <FONT face ="times new roman">
+                        
+                        <h2>Please, enter the value you want to add to the tree</h2>
                 
-                        <h2>Enter the number of objects</h2>
+                        <input type="text" name="add" placeholder="Enter int value"/>
+                        
+                        <h2>Please, enter the value you want to remove from the tree</h2>
                 
-                        <input type="text" name="num" placeholder="Enter the number of objects"/>
+                        <input type="text" name="del" placeholder="Enter int value"/>
+                        
+                        <h2>Please, enter the value you want to check whether it is in the tree</h2>
                 
+                        <input type="text" name="cont" placeholder="Enter int value"/>
+                        
                     </FONT>
-                
-                    <h1>Part3 "Multithreaded search"</h1>
-                
+                        
+                    <h2>Not necessarily!</h2>
+                        
                     <FONT face ="times new roman">
+                        
+                        <h2>Please, enter int values(through a space)</h2>
                 
-                        <h2>Enter the number of the threads</h2>
-                
-                        <input type="text" name="threads" placeholder="Enter the number of the threads"/>
-                
-                        <h2>Enter the search integer value</h2>
-                
-                        <input type="text" name="intp" placeholder="Enter the int value"/>
-                
-                        <h2></h2>
-                
-                        <input type="submit" value="Ok"/>
+                        <input type="text" name="nodes" placeholder="Enter int values"/>
+                        
                 
                     </FONT>
+                    
+                    <h2></h2>
+                
+                    <input type="submit" value="Ok"/>
         
                     </form>
            
