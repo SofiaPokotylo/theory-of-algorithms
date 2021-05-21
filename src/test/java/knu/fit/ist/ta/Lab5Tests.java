@@ -317,35 +317,35 @@ public class Lab5Tests {
             
         }
         
-    @Test
+        /*@Test
         
         void test6(){
-            
-            List<Integer> list = new ArrayList<>();
-            int n = 10;
-            for(int i=0;i<n;++i){
-                list.add(i);
-            }
-            
-            assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
-                + " the index of the element in the list: "+Arrays.asList("Thread1 - [0] - 0"),MultiThreadStart.showTest(10, 0, list));
-            assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
-                + " the index of the element in the list: "+Arrays.asList("Thread3 - [1] - 8"),MultiThreadStart.showTest(3, 7, list));
-            assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(-5, 0, list));
-            assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(0, 4, list));
-            assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(5, -4, list));
-            assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(-5, -2, list));
-            assertEquals("The number of the threads is too large, enter new value",MultiThreadStart.showTest(17, 0, list));
-            assertEquals("The size of list - "+list.size()+", the list doesn`t contain 10",MultiThreadStart.showTest(9, 10, list));
-            
-            list.set(5, 1);
-            
-            assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
-                + " the index of the element in the list: "+Arrays.asList("Thread1 - [1] - 1","Thread2 - [2] - 6"),
-                    MultiThreadStart.showTest(3, 1, list));
-            
-            list.removeAll(list);
-            
-            assertEquals("The list is empty",MultiThreadStart.showTest(2, 0, list));
+        
+        List<Integer> list = new ArrayList<>();
+        int n = 10;
+        for(int i=0;i<n;++i){
+        list.add(i);
         }
+        
+        assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+        + " the index of the element in the list: "+Arrays.asList("Thread1 - [0] - 0"),MultiThreadStart.showTest(10, 0, list));
+        assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+        + " the index of the element in the list: "+Arrays.asList("Thread3 - [1] - 8"),MultiThreadStart.showTest(3, 7, list));
+        assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(-5, 0, list));
+        assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(0, 4, list));
+        assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(5, -4, list));
+        assertEquals("The number of threads and the search value must be >0",MultiThreadStart.showTest(-5, -2, list));
+        assertEquals("The number of the threads is too large, enter new value",MultiThreadStart.showTest(17, 0, list));
+        assertEquals("The size of list - "+list.size()+", the list doesn`t contain 10",MultiThreadStart.showTest(9, 10, list));
+        
+        list.set(5, 1);
+        
+        assertEquals("The size of list - "+list.size()+", the thread + [the index of the element in the thread] +"
+        + " the index of the element in the list: "+Arrays.asList("Thread1 - [1] - 1","Thread2 - [2] - 6"),
+        MultiThreadStart.showTest(3, 1, list));
+        
+        list.removeAll(list);
+        
+        assertEquals("The list is empty",MultiThreadStart.showTest(2, 0, list));
+        }*/
 }
