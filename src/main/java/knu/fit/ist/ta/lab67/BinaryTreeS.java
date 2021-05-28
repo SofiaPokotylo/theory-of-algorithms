@@ -5,9 +5,13 @@
  */
 package knu.fit.ist.ta.lab67;
 
+import java.io.BufferedReader;
+import java.io.StringReader;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 
 /**
@@ -48,7 +52,7 @@ public class BinaryTreeS {
                 for(int j=0; j<i*2-2; ++j) str = str.concat(" ");
             }
             
-            str = str.concat("____");
+            str = str.concat("__");
             i /=2;
             while(localStack.isEmpty()==false) stack.push(localStack.pop());
         }

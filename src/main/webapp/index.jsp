@@ -84,7 +84,7 @@
         
             <form action="lab6-7form.jsp">
             
-            <input type="submit" value="Lab5">
+            <input type="submit" value="Lab6-7">
         
             </form>
            
@@ -92,6 +92,17 @@
         
         <HR width = "50%">
         
+        <div>
+        
+            <form action="lab8form.jsp">
+            
+            <input type="submit" value="Lab8">
+        
+            </form>
+           
+        </div>
+        
+        <HR width = "50%">
         
         <p><a href="lab1.jsp">Alternative variant</a></p>
         </fieldset>
