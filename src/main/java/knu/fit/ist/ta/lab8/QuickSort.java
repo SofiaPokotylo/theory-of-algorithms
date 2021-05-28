@@ -56,14 +56,6 @@ public class QuickSort {
         return list;
     }
     
-    /* public static List<Integer> quickSort(List<Integer> list, int low, int high){
-    if (low < high){
-    int pi = partition(list, low, high);
-    quickSort(list, low, pi - 1);
-    quickSort(list, pi + 1, high);
-    }
-    }*/
-    
     
     static int partitionL(List<Integer> list, int low, int high, List<Integer> listS){
         int k;

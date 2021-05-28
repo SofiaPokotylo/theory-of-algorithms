@@ -38,25 +38,12 @@ public class Lab8Show {
             
             Tickets.setTickets(Tickets.tickets());
             
-            //Tickets.cleantIter();
-            
             time = System.currentTimeMillis();
             Tickets.setWinTickets(Tickets.winTickets());
             time = System.currentTimeMillis() - time;
             
             if(Tickets.winTickets.isEmpty()) return "There is no winning ticket";
-                
-            /*Tickets.cleanRec();
-            time = System.currentTimeMillis();
-            Tickets.winTicketsR();
-            time = System.currentTimeMillis() - time;*/
-                
-            /*if(Tickets.winTicketsR.contains(-1)) return "The number of tickets - "+Tickets.tickets.size()+
-            ", the number of winning tickets - "+Tickets.winTickets.size()+
-            " ___ The number of winning tickets is too large for a recursive method ___ "+
-            "Time of iterative method - "+timeIt+" ms, the number of iterations - "+
-            Tickets.iter+", time complexity - O(n)";*/
-
+             
             return "The number of tickets - "+Tickets.numT+" ___ The number of winning tickets - "+
                 Tickets.winTickets.size()+
             " ___ Time of iterative method of compiling a list of winning tickets - "+time+
@@ -81,19 +68,6 @@ public class Lab8Show {
         time = System.currentTimeMillis() - time;
             
         if(Tickets.winTickets.isEmpty()) return "There is no winning ticket";
-
-        //long timeIt = time;
-                
-        /*Tickets.cleanRec();
-        time = System.currentTimeMillis();
-        Tickets.winTicketsR();
-        time = System.currentTimeMillis() - time;*/
-                
-        /*if(Tickets.winTicketsR.contains(-1)) return "The number of tickets - "+Tickets.tickets.size()+
-        ", the number of winning tickets - "+Tickets.winTickets.size()+
-        " ___ The number of winning tickets is too large for a recursive method ___ "+
-        "Time of iterative method - "+timeIt+" ms, the number of iterations - "+
-        Tickets.iter+", time complexity - O(n)";*/
                 
         else return "The number of tickets - "+Tickets.numT+" ___ The number of winning tickets - "+
                 Tickets.winTickets.size()+
@@ -265,34 +239,5 @@ public class Lab8Show {
             return "Radix: "+Jackpot.winJackpot(list)+" ___ Quick: "+Jackpot.winJackpot(listQ);
         
     }
-    
-    /*public String worst(){
-    
-    Lab8Show.cleanIter();
-    
-    List<Integer> list = Tickets.winTickets;
-    
-    SortRadix.radixsortL(list);
-    
-    int n = Tickets.winTickets.size();
-    
-    time = System.currentTimeMillis();
-    QuickSort.quickSort(list,0,n-1);
-    time = System.currentTimeMillis() - time;
-    
-    long time1 = time;
-    int iter1 = iter;
-    
-    Lab8Show.cleanIter();
-    
-    time = System.currentTimeMillis();
-    QuickSort.quickSortL(list,0,n-1);
-    time = System.currentTimeMillis() - time;
-    
-    return "Quick Sort: time - "+time1+" ms, iterations - "+
-    iter1+", time compexity - O(k(n^2)), with list: time - "+time+
-    " ms, iterations - "+iter+", time compexity - O(n^2)";
-    
-    }*/
     
 }
